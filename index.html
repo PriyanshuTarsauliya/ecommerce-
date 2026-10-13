@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOURA. | The Small Turismo & Luxury Leather Goods</title>
+  <meta name="description" content="Discover NOURA. Timeless sophistication, impeccable Italian craftsmanship, and iconic luxury leather bags. Explore The Small Turismo and complete the look.">
+  
+  <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <!-- Atelier Top Bar -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="announcement-content">
+      <span>Complimentary White-Glove Worldwide Delivery on orders over $400</span>
+      <span class="bullet">•</span>
+      <span>Handcrafted in Florence, Italy</span>
+      <span class="bullet">•</span>
+      <span>Spring / Summer 2026 Collection</span>
+    </div>
+  </aside>
+
+  <!-- Sticky Luxury Header -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <!-- Mobile Menu Trigger -->
+      <button class="icon-btn mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="NOURA Homepage">
+        NOURA.
+      </a>
+
+      <!-- Primary Navigation -->
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#turismo-spotlight" class="nav-link">Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a href="#complete-the-look" class="nav-link">Women</a>
+          </li>
+          <li class="nav-item">
+            <a href="#complete-the-look" class="nav-link">Men</a>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link nav-search-trigger" id="openSearchBtn" aria-label="Search Collection">
+              Search
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-mini-icon">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Utilities -->
+      <div class="header-actions">
+        <button class="header-link-btn" id="openAccountBtn" aria-label="User Account">
+          Account
+        </button>
+        <button class="icon-btn wishlist-btn" id="openWishlistBtn" aria-label="View Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="action-badge" id="wishlistCount">0</span>
+        </button>
+        <button class="header-cart-btn" id="openCartBtn" aria-label="Open Shopping Bag">
+          <span>Cart</span>
+          <span class="cart-parenthesis">(<span id="cartCount">0</span>)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION: Carry Elegance -->
+    <section class="hero-section" id="hero" aria-label="Hero Section">
+      <div class="hero-grid">
+        <!-- Left Column: Large Editorial Model Photography -->
+        <div class="hero-media-column">
+          <div class="hero-image-wrapper" id="heroImageWrapper">
+            <img 
+              id="heroActiveImage" 
+              src="./assets/hero_brown_coat.jpg" 
+              alt="NOURA Fashion Look with The Small Turismo Bag"
+              class="hero-active-img"
+              loading="eager"
+            />
+            <div class="hero-image-overlay"></div>
+            
+            <!-- Floating Look Switcher Badge -->
+            <div class="hero-look-badge" id="heroLookBadge">
+              <span class="badge-index">Look <strong id="lookCurrentIndex">01</strong> / 04</span>
+              <span class="badge-title" id="lookCurrentTitle">Sienna Tailored Coat</span>
+            </div>
+
+            <!-- Miniature Look Switcher Pills / Thumbnails -->
+            <div class="hero-thumbnails-bar" role="tablist" aria-label="Choose Featured Look">
+              <button class="look-thumb-btn active" data-look="0" aria-label="Look 1: Sienna Coat" role="tab" aria-selected="true">
+                <img src="./assets/hero_brown_coat.jpg" alt="Look 1 Thumbnail" />
+              </button>
+              <button class="look-thumb-btn" data-look="1" aria-label="Look 2: Noir Backless Silk" role="tab" aria-selected="false">
+                <img src="./assets/hero_black_dress.jpg" alt="Look 2 Thumbnail" />
+              </button>
+              <button class="look-thumb-btn" data-look="2" aria-label="Look 3: Blush Riviera Linen" role="tab" aria-selected="false">
+                <img src="./assets/hero_pink_look.jpg" alt="Look 3 Thumbnail" />
+              </button>
+              <button class="look-thumb-btn" data-look="3" aria-label="Look 4: Limoncello Sunlight" role="tab" aria-selected="false">
+                <img src="./assets/social_yellow_dress.jpg" alt="Look 4 Thumbnail" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Editorial Copy, Carry Elegance Headline, & 3 Bag Cards -->
+        <div class="hero-content-column">
+          <!-- Quote Tagline -->
+          <p class="hero-subquote">Elevate your look with the ultimate statement piece</p>
+
+          <!-- Monumental Headline -->
+          <h1 class="hero-heading">
+            <span class="hero-heading-line">Carry</span>
+            <span class="hero-heading-line italic-word">Elegance</span>
+          </h1>
+
+          <!-- 3 Bag Cards Grid (Yellow, Black, Pink as in video) -->
+          <div class="hero-bags-grid" role="region" aria-label="Featured Turismo Handbags">
+            <!-- Bag 1: Yellow / Limoncello -->
+            <article class="hero-bag-card" data-bag="limoncello" data-look="3" tabindex="0">
+              <button class="card-wishlist-btn" aria-label="Add Limoncello Turismo to Wishlist" data-item-id="bag-yellow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="card-img-box">
+                <img src="./assets/bag_yellow.jpg" alt="The Small Turismo in Limoncello Yellow" loading="lazy">
+              </div>
+              <div class="card-caption">
+                <span class="card-name">Limoncello</span>
+                <span class="card-price">$590</span>
+              </div>
+              <span class="card-hover-hint">Select Look</span>
+            </article>
+
+            <!-- Bag 2: Black / Noir (Active / Primary) -->
+            <article class="hero-bag-card active" data-bag="noir" data-look="1" tabindex="0">
+              <button class="card-wishlist-btn" aria-label="Add Noir Turismo to Wishlist" data-item-id="bag-black">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="card-img-box">
+                <img src="./assets/bag_black.jpg" alt="The Small Turismo in Noir Classic" loading="lazy">
+              </div>
+              <div class="card-caption">
+                <span class="card-name">Noir</span>
+                <span class="card-price">$590</span>
+              </div>
+              <span class="card-hover-hint">Active Look</span>
+            </article>
+
+            <!-- Bag 3: Pink / Blush -->
+            <article class="hero-bag-card" data-bag="blush" data-look="2" tabindex="0">
+              <button class="card-wishlist-btn" aria-label="Add Blush Turismo to Wishlist" data-item-id="bag-pink">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="card-img-box">
+                <img src="./assets/bag_pink.jpg" alt="The Small Turismo in Blush Rose" loading="lazy">
+              </div>
+              <div class="card-caption">
+                <span class="card-name">Blush</span>
+                <span class="card-price">$590</span>
+              </div>
+              <span class="card-hover-hint">Select Look</span>
+            </article>
+          </div>
+
+          <!-- Editorial Paragraph Copy -->
+          <div class="hero-footer-copy">
+            <p class="hero-paragraph">
+              Discover a curated selection of luxury designer bags. Timeless sophistication, impeccable craftsmanship, and iconic styles—all in one place.
+            </p>
+            <a href="#turismo-spotlight" class="hero-shop-link" id="heroShopBtn">
+              <span>Shop now</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT SPOTLIGHT SECTION: The Small Turismo -->
+    <section class="spotlight-section" id="turismo-spotlight" aria-label="Product Details: The Small Turismo">
+      <div class="spotlight-container">
+        <!-- Left Column: Specs Accordion & Title -->
+        <div class="spotlight-col spotlight-info-col">
+          <div class="product-title-group">
+            <span class="product-eyebrow">Signature Atelier Collection</span>
+            <h2 class="spotlight-title">The small Turismo</h2>
+            <div class="spotlight-price" id="spotlightPriceDisplay">$ 590</div>
+          </div>
+
+          <!-- Interactive Accordions -->
+          <div class="accordion-group">
+            <!-- Item 1: Product Information -->
+            <div class="accordion-item open" id="accItem1">
+              <button class="accordion-trigger" aria-expanded="true" aria-controls="accPanel1">
+                <span>Product information</span>
+                <span class="accordion-icon">−</span>
+              </button>
+              <div class="accordion-content" id="accPanel1">
+                <p>Structured architectural silhouette featuring our hand-buffed rolled top handles and custom light-gold galvanic hardware. Suede-lined interior with dual compartments and dedicated card slip pocket.</p>
+                <ul class="spec-list">
+                  <li><strong>Dimensions:</strong> 26 cm W x 18 cm H x 11 cm D (10.2" x 7.1" x 4.3")</li>
+                  <li><strong>Handle Drop:</strong> 9 cm (3.5")</li>
+                  <li><strong>Shoulder Strap:</strong> Detachable & adjustable (48 - 56 cm drop)</li>
+                  <li><strong>Closure:</strong> Magnetic flap with concealed brass lock</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Item 2: Material Information -->
+            <div class="accordion-item" id="accItem2">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="accPanel2">
+                <span>Material information</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content" id="accPanel2" hidden>
+                <p>100% full-grain box-calf leather sourced from a certified gold-rated Italian tannery in Tuscany. Smooth micro-grain finish resistant to light precipitation and day-to-day scuffs. Lined in plush organic lambskin nappa.</p>
+                <ul class="spec-list">
+                  <li><strong>Exterior:</strong> Full-Grain Italian Calfskin</li>
+                  <li><strong>Interior:</strong> Nappa Lambskin & Italian Suede</li>
+                  <li><strong>Hardware:</strong> Solid Brass with 24k Gold Electroplating</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Item 3: Care Instructions -->
+            <div class="accordion-item" id="accItem3">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="accPanel3">
+                <span>Care instructions</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content" id="accPanel3" hidden>
+                <p>To preserve the natural grain and luster of your leather, protect it from sustained moisture, direct radiator heat, and abrasive cosmetics. Gently wipe with the provided dry microfiber cloth and store inside the organic cotton dust bag when resting.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guarantee Badges -->
+          <div class="atelier-assurances">
+            <div class="assurance-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Handcrafted in Tuscany • Edition 04/50</span>
+            </div>
+            <div class="assurance-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Lifetime Atelier Craft Guarantee</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Column: Model & Bag Visual Showcase -->
+        <div class="spotlight-col spotlight-visual-col">
+          <div class="spotlight-stage">
+            <div class="visual-wrapper" id="spotlightVisualWrapper">
+              <img 
+                src="./assets/hero_black_dress.jpg" 
+                alt="The small Turismo worn in noir silhouette" 
+                id="spotlightMainImg" 
+                class="spotlight-image"
+              />
+            </div>
+            <div class="stage-view-toggles">
+              <button class="stage-toggle-btn active" data-view="model">Editorial View</button>
+              <button class="stage-toggle-btn" data-view="product">Product Still</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Swatches, Size & Add to Cart -->
+        <div class="spotlight-col spotlight-actions-col">
+          <!-- Color Picker -->
+          <div class="picker-section">
+            <div class="picker-header">
+              <span class="picker-label">Choose color</span>
+              <span class="picker-selected" id="selectedColorName">Noir Classic</span>
+            </div>
+            <div class="color-swatches" role="radiogroup" aria-label="Available Colors">
+              <button class="swatch-btn active" data-color="noir" data-name="Noir Classic" data-img="./assets/hero_black_dress.jpg" data-still="./assets/bag_black.jpg" style="--swatch-color: #1A1A1A;" aria-label="Noir Classic" aria-checked="true" role="radio"></button>
+              <button class="swatch-btn" data-color="sienna" data-name="Sienna Raw" data-img="./assets/hero_brown_coat.jpg" data-still="./assets/hero_brown_coat.jpg" style="--swatch-color: #6A381F;" aria-label="Sienna Raw" aria-checked="false" role="radio"></button>
+              <button class="swatch-btn" data-color="blush" data-name="Blush Rose" data-img="./assets/hero_pink_look.jpg" data-still="./assets/bag_pink.jpg" style="--swatch-color: #D8A49B;" aria-label="Blush Rose" aria-checked="false" role="radio"></button>
+              <button class="swatch-btn" data-color="limoncello" data-name="Limoncello Yellow" data-img="./assets/social_yellow_dress.jpg" data-still="./assets/bag_yellow.jpg" style="--swatch-color: #E2BF42;" aria-label="Limoncello Yellow" aria-checked="false" role="radio"></button>
+              <button class="swatch-btn" data-color="alabaster" data-name="Alabaster Bone" data-img="./assets/hero_pink_look.jpg" data-still="./assets/bag_pink.jpg" style="--swatch-color: #E6E1D7;" aria-label="Alabaster Bone" aria-checked="false" role="radio"></button>
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div class="picker-section">
+            <div class="picker-header">
+              <span class="picker-label">Select size</span>
+              <button class="size-guide-btn" id="openSizeGuideBtn">Size Dimensions</button>
+            </div>
+            <div class="size-options-grid" role="radiogroup" aria-label="Select Bag Size">
+              <button class="size-pill-btn" data-size="mini" data-price="520" role="radio" aria-checked="false">
+                <span class="size-name">Mini</span>
+                <span class="size-dim">20 cm</span>
+              </button>
+              <button class="size-pill-btn active" data-size="small" data-price="590" role="radio" aria-checked="true">
+                <span class="size-name">Small</span>
+                <span class="size-dim">26 cm</span>
+              </button>
+              <button class="size-pill-btn" data-size="medium" data-price="680" role="radio" aria-checked="false">
+                <span class="size-name">Medium</span>
+                <span class="size-dim">32 cm</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quantity & Add to Cart -->
+          <div class="purchase-actions-box">
+            <div class="qty-and-stock">
+              <div class="qty-stepper">
+                <button class="qty-btn" id="qtyMinus" aria-label="Decrease quantity">−</button>
+                <span class="qty-val" id="qtyVal">1</span>
+                <button class="qty-btn" id="qtyPlus" aria-label="Increase quantity">+</button>
+              </div>
+              <div class="stock-status">
+                <span class="stock-pulse"></span>
+                <span>In Stock • Ready to dispatch</span>
+              </div>
+            </div>
+
+            <!-- Primary Add to Cart Button -->
+            <button class="btn-luxury-primary" id="addTurismoToCartBtn">
+              <span class="btn-text">Add to cart</span>
+              <span class="btn-sep">•</span>
+              <span class="btn-price" id="btnPriceLabel">$ 590</span>
+            </button>
+
+            <!-- Express Checkout mock -->
+            <button class="btn-luxury-secondary" id="expressBuyBtn">
+              <span>Instant Concierge Checkout</span>
+            </button>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="trust-features">
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Complimentary insured shipping</span>
+            </div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>30-day complimentary atelier returns</span>
+            </div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Numbered certificate of authenticity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLETE THE LOOK SECTION -->
+    <section class="complete-look-section" id="complete-the-look" aria-label="Complete the Look">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">Complete the look</h2>
+          <p class="section-subtitle">Curated styling pairings handcrafted to harmonize with The Small Turismo.</p>
+        </div>
+
+        <!-- 4 Products Grid as in video (Ovallo jacket, Care earrings, Ovallo pants, High cubisto) -->
+        <div class="look-products-grid">
+          <!-- Item 1: Ovallo jacket -->
+          <article class="product-card" data-id="item-jacket" data-name="Ovallo jacket" data-price="990">
+            <div class="product-media">
+              <button class="card-wishlist-btn" aria-label="Save Ovallo jacket to wishlist" data-item-id="item-jacket">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="./assets/item_jacket.jpg" alt="Ovallo jacket" loading="lazy" class="product-img">
+              <div class="product-hover-actions">
+                <button class="btn-quick-add" data-id="item-jacket" data-name="Ovallo jacket" data-price="990" data-img="./assets/item_jacket.jpg">
+                  Add to Cart
+                </button>
+                <button class="btn-quick-view" data-id="item-jacket">Quick View</button>
+              </div>
+            </div>
+            <div class="product-info-row">
+              <div class="product-titles">
+                <h3 class="product-name">Ovallo jacket</h3>
+                <span class="product-category">Outerwear</span>
+              </div>
+              <div class="product-price">$990</div>
+            </div>
+          </article>
+
+          <!-- Item 2: Care earrings -->
+          <article class="product-card" data-id="item-earrings" data-name="Care earings" data-price="250">
+            <div class="product-media">
+              <button class="card-wishlist-btn" aria-label="Save Care earings to wishlist" data-item-id="item-earrings">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="./assets/item_earrings.jpg" alt="Care earings" loading="lazy" class="product-img">
+              <div class="product-hover-actions">
+                <button class="btn-quick-add" data-id="item-earrings" data-name="Care earings" data-price="250" data-img="./assets/item_earrings.jpg">
+                  Add to Cart
+                </button>
+                <button class="btn-quick-view" data-id="item-earrings">Quick View</button>
+              </div>
+            </div>
+            <div class="product-info-row">
+              <div class="product-titles">
+                <h3 class="product-name">Care earings</h3>
+                <span class="product-category">Fine Jewelry</span>
+              </div>
+              <div class="product-price">$250</div>
+            </div>
+          </article>
+
+          <!-- Item 3: Ovallo pants -->
+          <article class="product-card" data-id="item-pants" data-name="Ovallo pants" data-price="790">
+            <div class="product-media">
+              <button class="card-wishlist-btn" aria-label="Save Ovallo pants to wishlist" data-item-id="item-pants">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="./assets/item_pants.jpg" alt="Ovallo pants" loading="lazy" class="product-img">
+              <div class="product-hover-actions">
+                <button class="btn-quick-add" data-id="item-pants" data-name="Ovallo pants" data-price="790" data-img="./assets/item_pants.jpg">
+                  Add to Cart
+                </button>
+                <button class="btn-quick-view" data-id="item-pants">Quick View</button>
+              </div>
+            </div>
+            <div class="product-info-row">
+              <div class="product-titles">
+                <h3 class="product-name">Ovallo pants</h3>
+                <span class="product-category">Tailoring</span>
+              </div>
+              <div class="product-price">$790</div>
+            </div>
+          </article>
+
+          <!-- Item 4: High cubisto -->
+          <article class="product-card" data-id="item-heels" data-name="High cubisto" data-price="750">
+            <div class="product-media">
+              <button class="card-wishlist-btn" aria-label="Save High cubisto to wishlist" data-item-id="item-heels">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <img src="./assets/item_heels.jpg" alt="High cubisto" loading="lazy" class="product-img">
+              <div class="product-hover-actions">
+                <button class="btn-quick-add" data-id="item-heels" data-name="High cubisto" data-price="750" data-img="./assets/item_heels.jpg">
+                  Add to Cart
+                </button>
+                <button class="btn-quick-view" data-id="item-heels">Quick View</button>
+              </div>
+            </div>
+            <div class="product-info-row">
+              <div class="product-titles">
+                <h3 class="product-name">High cubisto</h3>
+                <span class="product-category">Footwear</span>
+              </div>
+              <div class="product-price">$750</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SOCIALS EDITORIAL GALLERY SECTION -->
+    <section class="socials-section" id="our-socials" aria-label="Our Socials Gallery">
+      <div class="section-container">
+        <div class="socials-header">
+          <h2 class="socials-title">Our Socials</h2>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="socials-handle">
+            @noura.atelier
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Masonry / Asymmetric Grid as in video frames 00:07-00:09 -->
+        <div class="socials-mosaic-grid">
+          <!-- Big top item: yellow velvet armchair living space -->
+          <div class="social-item social-item-wide" tabindex="0">
+            <img src="./assets/social_yellow_interior.jpg" alt="Milan Atelier interior with sunlit yellow armchairs" loading="lazy">
+            <div class="social-item-overlay">
+              <span class="social-tag">Atelier Milan</span>
+              <p class="social-caption">Morning sunlight across the archives. Warm tones and architectural stillness.</p>
+              <span class="social-shop-link">Explore the space →</span>
+            </div>
+          </div>
+
+          <!-- Bottom left: boutique archway interior -->
+          <div class="social-item" tabindex="0">
+            <img src="./assets/social_boutique.jpg" alt="Flagship boutique with sculptural arches" loading="lazy">
+            <div class="social-item-overlay">
+              <span class="social-tag">Via Montenapoleone</span>
+              <p class="social-caption">The architectural salon. Sculpted plaster and minimalist comfort.</p>
+              <span class="social-shop-link">Book appointment →</span>
+            </div>
+          </div>
+
+          <!-- Bottom right: model in yellow dress by sea -->
+          <div class="social-item" tabindex="0">
+            <img src="./assets/social_yellow_dress.jpg" alt="Model walking in butter-yellow column dress" loading="lazy">
+            <div class="social-item-overlay">
+              <span class="social-tag">Cruise 2026</span>
+              <p class="social-caption">Fluid silk against the terracotta coast. Photographed in Puglia.</p>
+              <span class="social-shop-link">Shop the look →</span>
+            </div>
+          </div>
+
+          <!-- Extra detail: leather craft hand stitch -->
+          <div class="social-item" tabindex="0">
+            <img src="./assets/social_craft.jpg" alt="Artisan hand-stitching luxury leather" loading="lazy">
+            <div class="social-item-overlay">
+              <span class="social-tag">The Craft</span>
+              <p class="social-caption">Saddle-stitched by hand in Florence. One artisan, eighteen hours.</p>
+              <span class="social-shop-link">Read atelier journal →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SUBSCRIPTION (As seen in frame 00:09) -->
+    <section class="newsletter-section" id="newsletter" aria-label="Newsletter Subscription">
+      <div class="newsletter-container">
+        <div class="newsletter-left">
+          <h2 class="newsletter-heading">
+            Stay update with special offers,<br>
+            atelier notes, and more.
+          </h2>
+        </div>
+        <div class="newsletter-right">
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <div class="newsletter-input-group">
+              <input 
+                type="email" 
+                id="newsletterEmail" 
+                class="newsletter-input" 
+                placeholder="Your email" 
+                required 
+                aria-label="Email address for atelier notes"
+              />
+              <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to newsletter">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="newsletter-feedback" id="newsletterFeedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-col brand-col">
+          <div class="footer-logo">NOURA.</div>
+          <p class="footer-brand-bio">
+            Florence & Milan based haute leather atelier dedicated to sculptural purism, sustainable Tuscan box-calf leather, and lifelong craftsmanship.
+          </p>
+          <div class="currency-selector-box">
+            <label for="currencySelect">Region / Currency:</label>
+            <select id="currencySelect" class="currency-dropdown">
+              <option value="USD">United States (USD $)</option>
+              <option value="EUR">European Union (EUR €)</option>
+              <option value="GBP">United Kingdom (GBP £)</option>
+              <option value="JPY">Japan (JPY ¥)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Collections</h4>
+          <ul class="footer-links">
+            <li><a href="#turismo-spotlight">The Small Turismo</a></li>
+            <li><a href="#complete-the-look">Tailored Outerwear</a></li>
+            <li><a href="#complete-the-look">Fine Jewelry</a></li>
+            <li><a href="#complete-the-look">Footwear & Heels</a></li>
+            <li><a href="#">Archival Releases</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Client Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">White-Glove Delivery</a></li>
+            <li><a href="#">Complimentary Returns</a></li>
+            <li><a href="#">Atelier Care & Restoration</a></li>
+            <li><a href="#">Private Viewing Appointment</a></li>
+            <li><a href="#">Certificate Authentication</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Ateliers</h4>
+          <ul class="footer-links">
+            <li><span>Milan — Via Montenapoleone 18</span></li>
+            <li><span>Florence — Piazza della Signoria 4</span></li>
+            <li><span>Paris — Place Vendôme 12</span></li>
+            <li><span>New York — 740 Madison Ave</span></li>
+            <li><span>Tokyo — Ginza 6-Chome</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">© 2026 NOURA. All rights reserved. Handcrafted with pride in Italy.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="sep">/</span>
+          <a href="#">Terms of Atelier</a>
+          <span class="sep">/</span>
+          <a href="#">Sustainability & Traceability</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SLIDE-OUT CART DRAWER -->
+  <aside class="cart-drawer-overlay" id="cartDrawerOverlay" aria-hidden="true">
+    <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <h3 class="drawer-title">Shopping Bag</h3>
+          <span class="drawer-count-badge" id="drawerCartCount">0 items</span>
+        </div>
+        <button class="drawer-close-btn" id="closeCartBtn" aria-label="Close Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Free Shipping Progress -->
+      <div class="shipping-meter-box">
+        <div class="meter-text" id="shippingMeterText">Add $400 for complimentary express delivery</div>
+        <div class="meter-bar-track">
+          <div class="meter-bar-fill" id="shippingMeterFill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Cart Items List -->
+      <div class="drawer-items-list" id="cartItemsList">
+        <!-- Rendered dynamically by app.js -->
+        <div class="empty-cart-message">
+          <p>Your shopping bag is currently empty.</p>
+          <a href="#turismo-spotlight" class="btn-empty-shop" id="emptyCartShopBtn">Explore The Small Turismo</a>
+        </div>
+      </div>
+
+      <!-- Drawer Footer -->
+      <div class="drawer-footer" id="cartDrawerFooter">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span class="summary-subtotal" id="cartSubtotal">$0</span>
+        </div>
+        <div class="summary-line text-muted">
+          <span>Shipping</span>
+          <span id="cartShippingValue">Calculated at checkout</span>
+        </div>
+        <button class="btn-checkout-luxury" id="checkoutBtn">
+          <span>Proceed to Checkout</span>
+          <span class="checkout-arrow">→</span>
+        </button>
+        <p class="drawer-guarantee-note">Duties and taxes included • 30-day effortless returns</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- WISHLIST DRAWER / MODAL -->
+  <aside class="wishlist-overlay" id="wishlistOverlay" aria-hidden="true">
+    <div class="wishlist-drawer" id="wishlistDrawer" role="dialog" aria-modal="true" aria-label="Saved Wishlist">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <h3 class="drawer-title">Saved Wishlist</h3>
+          <span class="drawer-count-badge" id="drawerWishlistCount">0 items</span>
+        </div>
+        <button class="drawer-close-btn" id="closeWishlistBtn" aria-label="Close Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="drawer-items-list" id="wishlistItemsList">
+        <div class="empty-cart-message">
+          <p>Your wishlist is currently empty.</p>
+          <p class="empty-subtext">Click the heart icon on any piece to save it for later.</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- QUICK VIEW MODAL -->
+  <div class="quick-view-overlay" id="quickViewOverlay" aria-hidden="true">
+    <div class="quick-view-modal" role="dialog" aria-modal="true" aria-label="Quick Product View">
+      <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Close Quick View">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="quick-view-body" id="quickViewContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH OVERLAY MODAL -->
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-box-modal" role="dialog" aria-modal="true" aria-label="Search Atelier Catalog">
+      <div class="search-header">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" id="searchInput" class="search-field" placeholder="Search bags, outerwear, jewelry..." autofocus />
+        </div>
+        <button class="search-close-btn" id="closeSearchBtn" aria-label="Close Search">✕</button>
+      </div>
+      <div class="search-quick-tags">
+        <span>Suggested:</span>
+        <button class="quick-tag-btn" data-search="Turismo">The Small Turismo</button>
+        <button class="quick-tag-btn" data-search="Jacket">Ovallo Jacket</button>
+        <button class="quick-tag-btn" data-search="Earrings">Care Earings</button>
+        <button class="quick-tag-btn" data-search="Pants">Ovallo Pants</button>
+      </div>
+      <div class="search-results-list" id="searchResultsList"></div>
+    </div>
+  </div>
+
+  <!-- SIZE GUIDE MODAL -->
+  <div class="size-modal-overlay" id="sizeModalOverlay" aria-hidden="true">
+    <div class="size-modal" role="dialog" aria-modal="true" aria-label="Turismo Size Guide">
+      <button class="modal-close-btn" id="closeSizeModalBtn" aria-label="Close Size Guide">✕</button>
+      <h3 class="modal-title">Turismo Proportion Matrix</h3>
+      <table class="size-table">
+        <thead>
+          <tr>
+            <th>Proportion</th>
+            <th>Width</th>
+            <th>Height</th>
+            <th>Depth</th>
+            <th>Strap Drop</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mini</strong></td>
+            <td>20 cm (7.9")</td>
+            <td>14 cm (5.5")</td>
+            <td>8 cm (3.1")</td>
+            <td>50-58 cm</td>
+            <td>$520</td>
+          </tr>
+          <tr class="active-row">
+            <td><strong>Small (Featured)</strong></td>
+            <td>26 cm (10.2")</td>
+            <td>18 cm (7.1")</td>
+            <td>11 cm (4.3")</td>
+            <td>48-56 cm</td>
+            <td>$590</td>
+          </tr>
+          <tr>
+            <td><strong>Medium</strong></td>
+            <td>32 cm (12.6")</td>
+            <td>23 cm (9.0")</td>
+            <td>14 cm (5.5")</td>
+            <td>46-52 cm</td>
+            <td>$680</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="size-note">Each piece comes with custom dust bag, box, and authenticity card.</p>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Main JavaScript Application -->
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
